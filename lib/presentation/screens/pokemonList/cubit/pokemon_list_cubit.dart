@@ -11,10 +11,4 @@ class PokemonListCubit extends Cubit<PokemonListState> {
     repository.getPokemons().then((value) =>
         {emit(PokemonsLoaded(pokemons: value != null ? value : []))});
   }
-
-  void getPokemonDetails(id) {
-    repository.getPokemonDetails(id).then((value) => {
-          // print(value),
-        });
-  }
 }

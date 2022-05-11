@@ -1,27 +1,6 @@
-// import 'dart:ui';
-
 import 'package:flutter/material.dart';
-// import 'package:badges/badges.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pokemons/cubit/pokemon_list_cubit.dart';
 import 'package:pokemons/data/models/pokemon.dart';
-import 'package:pokemons/presentation/screens/pokemon.dart';
-
-// class PokemonWidget extends StatelessWidget {
-//   late final bool isFavourite;
-//   late final Pokemon pokemon;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       child: _pokemon(
-//           context: context, isFavourite: isFavourite, pokemon: pokemon),
-//     );
-//   }
-
-//   Widget _pokemon({context, isFavourite, pokemon}) {
-
-// }
+import 'package:pokemons/presentation/screens/pokemon/pokemon.dart';
 
 class PokemonWidget extends StatelessWidget {
   final bool isFavourite;
@@ -37,8 +16,6 @@ class PokemonWidget extends StatelessWidget {
         Navigator.pushNamed(context, '/pokemon',
             arguments: ScreenArguments(
                 pokemon: this.pokemon, isFavorite: this.isFavourite)),
-        BlocProvider.of<PokemonListCubit>(context)
-            .getPokemonDetails(pokemon.id),
       },
       child: Container(
         child: Column(
@@ -77,8 +54,10 @@ class PokemonWidget extends StatelessWidget {
             )
           ],
         ),
-        decoration: BoxDecoration(color: Colors.white),
-        height: 180.0,
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 9.0),
       ),
     );
   }

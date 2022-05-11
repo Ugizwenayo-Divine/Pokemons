@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pokemons/presentation/router.dart';
-import 'package:pokemons/presentation/screens/pokemons_list.dart';
 
 void main() {
   runApp(Pokemons(
@@ -18,7 +17,6 @@ class Pokemons extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: router.generateRoute,
-      // home: DefaultTabController(length: 2, child: PokemonsList()),
     );
   }
 }

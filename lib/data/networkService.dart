@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart';
 
 class NetworkService {
-  final String baseURL = "https://pokeapi.co/api/v2/pokemon-form/";
+  final String baseURL = "https://pokeapi.co/api/v2/pokemon/";
 
   Future<List<dynamic>?> getPokemons() async {
     try {
